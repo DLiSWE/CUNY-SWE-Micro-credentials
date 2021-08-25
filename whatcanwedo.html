@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>Save it</title>
+<link rel="stylesheet" type="text/css" href="anotherstylesheet.css">
+<style type="text/css">
+
+.main {
+width:200px;
+border:1px solid black;
+}
+
+.month {
+background-color:black;
+font:bold 12px verdana;
+color:white;
+}
+
+.daysofweek {
+background-color:gray;
+font:bold 12px verdana;
+color:white;
+}
+
+.days {
+font-size: 12px;
+font-family:verdana;
+color:black;
+background-color: lightyellow;
+padding: 2px;
+}
+
+.days #today{
+font-weight: bold;
+color: red;
+}
+</style>
+<script type="text/javascript" src="basiccalendar.js">
+/***********************************************
+* Basic Calendar-By Brian Gosselin at http://scriptasylum.com/bgaudiodr/
+* Script featured on Dynamic Drive (http://www.dynamicdrive.com)
+* This notice must stay intact for use
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+</script> 
+</head>
+<body onLoad="show5()">
+<div class="container">
+<span id="liveclock" style="position:absolute;left:0;top:0;">
+</span>
+<script>
+/*
+Upper Left Corner Live Clock Script- (c) Dynamic Drive (www.dynamicdrive.com)
+For full source code, 100's more DHTML scripts, and TOS,
+visit http://www.dynamicdrive.com
+*/
+function show5(){
+ if (!document.layers&&!document.all&&!document.getElementById)
+ return
+ var Digital=new Date()
+ var hours=Digital.getHours()
+ var minutes=Digital.getMinutes()
+ var seconds=Digital.getSeconds()
+ var dn="AM" 
+ if (hours>12){
+ dn="PM"
+ hours=hours-12
+ }
+ if (hours==0)
+ hours=12
+ if (minutes<=9)
+ minutes="0"+minutes
+ if (seconds<=9)
+ seconds="0"+seconds
+//change font size here to your desire
+myclock="<font size='5' text color= 'white' face='Arial' ><b><font size='2'>Current Time:</font></br>"+hours+":"+minutes+":"
+ +seconds+" "+dn+"</b></font>"
+if (document.layers){
+document.layers.liveclock.document.write(myclock)
+document.layers.liveclock.document.close()
+}
+else if (document.all)
+liveclock.innerHTML=myclock
+else if (document.getElementById)
+document.getElementById("liveclock").innerHTML=myclock
+setTimeout("show5()",1000)
+ }
+</script>
+	<!--Created from GIMP-->
+	<header>
+	<img src="final.png" alt="HTML5 Icon">
+	</header>
+		</div>
+	<div class="column-left">
+			<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a class="active" href="whatcanwedo.html">What can we do?</a></li>
+  <li><a href="interestingfacts.html">Interesting Facts</a></li>
+  <li><a href="externalindex.html">About Me</a></li>
+  <li><a href="brokeboys.html">Stay Updated!</a></li>
+  <li><a href="fillin.html">TBA</a></li>
+			</ul>
+  <script type="text/javascript">
+
+var todaydate=new Date()
+var curmonth=todaydate.getMonth()+1 //get current month (1-12)
+var curyear=todaydate.getFullYear() //get current year
+
+document.write(buildCal(curmonth ,curyear, "main", "month", "daysofweek", "days", 1));
+</script>
+	</div>
+<div class="column-center">
+  <img src="dumping.png" alt="HTML5 Icon" style="width:100%;height:500px">
+	</div>
+<div class="column-right">
+<script>
+  function getText(){
+  var xyz = parseInt(document.getElementById('textOne').value);
+  var abc = parseInt(document.getElementById('textTwo').value);
+  var inf = abc*xyz;
+  var hoh = inf * 0.00008;
+  var led = hoh * 8760;
+  var utz = "";
+ if (led<5){
+	utz = " dollars. You could do better.";}
+ else if(led<10){
+ 	utz = " dollars. You've saved a pretty good amount!";}
+ else {
+ 	utz = " dollars. You're doing great!";}	
+ 
+     document.getElementById("change").innerHTML = led + utz;}
+</script>
+	<h1 style="text-align:center">What we can do to help?</h1>
+	<p> There are a few basic things you can do at home to be more eco-friendly.</p>
+<p>It is important to make sure your garbage is separated so the correct facilities receive the right garbage since certain trash requires different equipment.</p>
+<p>Try to save electricity by using clean reusable energy like solar power or wind power or even switching more energy efficient lightbulbs would help. </p>
+<p>Reduce paper consumption. Paper will degrade over several recycling processes and would eventually be unusable after a few recycling rounds.</p>
+<h3>Switching lightbulbs to energy LED can save you time and money! Enter how many lightbulbs you have.</h3>
+<input type="text" id="textOne"/>
+<p>Enter approximately how long you leave your lights on everyday</p>
+<input type="text" id="textTwo"/>
+<input type="button" value="Calculate" onclick="getText()" />
+<p>You save up to<br></p>
+<p id="change">_________</p>
+<p>This is how much you can save a year. And they last longer too!</p>
+	<audio controls>
+ <source src="recycle.mp3"
+         type='audio/mp3'>
+ <!-- The next two lines are only executed if the browser doesn't support MP4 files -->
+ <source src="recycle.mp3"
+         type='audio/mp3'>
+ <!-- The next line will only be executed if the browser doesn't support the audio tag-->
+ <p>Your browser does not support this audio file.</p>
+</audio>
+	</div>
+	
+</body>
+</html>
