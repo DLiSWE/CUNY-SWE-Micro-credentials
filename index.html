@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>Save it</title>
+<link rel="stylesheet" type="text/css" href="2stylesheet.css">
+<style type="text/css">
+
+.main {
+width:200px;
+border:1px solid black;
+}
+
+.month {
+background-color:black;
+font:bold 12px verdana;
+color:white;
+}
+
+.daysofweek {
+background-color:gray;
+font:bold 12px verdana;
+color:white;
+}
+
+.days {
+font-size: 12px;
+font-family:verdana;
+color:black;
+background-color: lightyellow;
+padding: 2px;
+}
+
+.days #today{
+font-weight: bold;
+color: red;
+}
+
+</style>
+
+
+<script type="text/javascript" src="basiccalendar.js">
+</script> 
+<!--
+/***********************************************
+* Basic Calendar-By Brian Gosselin at http://scriptasylum.com/bgaudiodr/
+* Script featured on Dynamic Drive (http://www.dynamicdrive.com)
+* This notice must stay intact for use
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+-->
+
+</head>
+<body onLoad="show5(); okay(); funkytown()">
+<div class="container">
+<span id="liveclock" style="position:absolute;left:0;top:0;">
+</span>
+<script>
+/*
+Upper Left Corner Live Clock Script- (c) Dynamic Drive (www.dynamicdrive.com)
+For full source code, 100's more DHTML scripts, and TOS,
+visit http://www.dynamicdrive.com
+*/
+function show5(){
+ if (!document.layers&&!document.all&&!document.getElementById)
+ return
+ var Digital=new Date()
+ var hours=Digital.getHours()
+ var minutes=Digital.getMinutes()
+ var seconds=Digital.getSeconds()
+ var dn="AM" 
+ if (hours>12){
+ dn="PM"
+ hours=hours-12
+ }
+ if (hours==0)
+ hours=12
+ if (minutes<=9)
+ minutes="0"+minutes
+ if (seconds<=9)
+ seconds="0"+seconds
+//change font size here to your desire
+myclock="<font size='5' text color= 'white' face='Arial' ><b><font size='2'>Current Time:</font></br>"+hours+":"+minutes+":"
+ +seconds+" "+dn+"</b></font>"
+if (document.layers){
+document.layers.liveclock.document.write(myclock)
+document.layers.liveclock.document.close()
+}
+else if (document.all)
+liveclock.innerHTML=myclock
+else if (document.getElementById)
+document.getElementById("liveclock").innerHTML=myclock
+setTimeout("show5()",1000)
+ }
+</script>
+	<header>
+	<img src="final.png" alt="HTML5 Icon">
+	</header>
+	</div>
+	<div class="column-left">
+<!--This is the navigation bar-->
+<ul>
+  <li><a class="active" href="index.html">Home</a></li>
+  <li><a  href="whatcanwedo.html">What can we do?</a></li>
+  <li><a href="interestingfacts.html">Interesting Facts</a></li>
+  <li><a href="externalindex.html">About Me</a></li>
+  <li><a href="brokeboys.html">Stay Updated</a></li>
+  <li><a href="fillin.html">TBA</a></li>
+</ul>
+  <script type="text/javascript">
+
+var todaydate=new Date()
+var curmonth=todaydate.getMonth()+1 //get current month (1-12)
+var curyear=todaydate.getFullYear() //get current year
+
+document.write(buildCal(curmonth ,curyear, "main", "month", "daysofweek", "days", 1));
+</script>
+	</div>
+<div class="column-center">
+  <h1>Our Mission</h1>
+  	<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="530" height="300" data="pollution.mp4">
+    <param name="pollution" value="pollution.mp4"/>
+    <param name="autoplay" value="false"/>
+    <param name="loop" value="false"/>
+    <!--[if !IE]>-->
+    <object type="video/mp4" data="pollution.mp4" width="530" height="300">
+        <param name="autoplay" value="false"/>
+        <param name="controller" value="true"/>
+        <param name="loop" value="false"/>
+    <!--<![endif]-->
+        <a href="http://www.adobe.com/go/getflash">
+            <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player"/>
+        </a>
+    <!--[if !IE]>-->
+    </object>
+    <!--<![endif]-->
+</object>
+
+	<script>
+ function okay() {
+    var d = new Date();
+    var time = d.getHours();
+    var heyy;
+    if (time < 12) {
+    heyy = "Thank you for visiting and have a nice morning!";
+    }
+    else if ( time < 20) {
+    heyy = "Thank you for visiting and have a nice afternoon!";
+    }
+    else {
+    heyy = "Thank you for visiting and have a nice evening!";}
+	var newnewnew = document.createElement("H3");
+	var newertext = document.createTextNode(heyy);
+	newnewnew.appendChild(newertext);
+	document.getElementById("hey").appendChild(newnewnew);
+	}
+	
+	function funkytown() {
+    var themain;
+    var bruh = prompt("Enter your name so I can say Hi!", "");
+    if (bruh == null || bruh == "") {
+        themain = "It's okay.";
+    } else {
+        themain = "Hey " + bruh + "!!";
+    }
+    document.getElementById("wassup").innerHTML = themain;
+}
+	</script>
+	<p id="wassup"><p><p id="hey"><p>
+	</div>
+	<!--Video found on at https://www.youtube.com/watch?v=vP3pbh_-pu8 from JoraulTechy -->
+
+<div class="column-right">
+<h1>Fighting Climate Change</h1>
+<p>There are hundreds of organizations that are working to protect and repair the environment such as. Enter how many organizations you are looking for.</p>
+	<script>
+function nutha() {
+    var qq = ["1. The Environmental Protection Agency. The EPA is a government organization that was created in 1970 to combat pollution and to impose new regulations to protect the environment.","2. National Wildlife Federation. The National Wildlife Federation is a nonprofit private organization created in 1936 to protect and restore wildlife.","3. Intergovernmental Panel on Climate Change. The IPCC is a group of scientists throughout the world that analyse the several aspects of climate change and global warming.","4. The United States Environmental Protection Agency. This agency was created by the government to protect human health and the environment.","5. Defenders of Wildlife. This non-profit organization was created to protect animals and plants from extinction."];
+    var loll = "";
+    var rent = document.getElementById("textChew").value;
+    var hah = rent;
+    while (hah--) {
+        loll += qq[hah] + "<br>";
+    }
+    document.getElementById("chicken").innerHTML = loll;
+}
+
+function que() {
+	var pop = document.forms["aForm"]["textChew"].value;
+	if (pop == "") {
+		alert("This must not be left blank");
+		return false;
+	}
+}
+</script>
+
+<body>
+<form name="aForm" action="/action_page_post.php"
+onsubmit="return que()" method="post">
+<input type="text" id="textChew"/>
+<input type="button" value="click" onclick="nutha();que()"/>
+</form>
+</body>
+
+<p id="chicken"></p>
+</div>	
+</body>
+</html>
