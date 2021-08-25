@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<title>Save it</title>
+<link rel="stylesheet" type="text/css" href="2stylesheet.css">
+<style type="text/css">
+
+.main {
+width:200px;
+border:1px solid black;
+}
+
+.month {
+background-color:black;
+font:bold 12px verdana;
+color:white;
+}
+
+.daysofweek {
+background-color:gray;
+font:bold 12px verdana;
+color:white;
+}
+
+.days {
+font-size: 12px;
+font-family:verdana;
+color:black;
+background-color: lightyellow;
+padding: 2px;
+}
+
+.days #today{
+font-weight: bold;
+color: red;
+}
+</style>
+<script type="text/javascript" src="basiccalendar.js">
+/***********************************************
+* Basic Calendar-By Brian Gosselin at http://scriptasylum.com/bgaudiodr/
+* Script featured on Dynamic Drive (http://www.dynamicdrive.com)
+* This notice must stay intact for use
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+</script> 
+</head>
+<body onLoad="show5()">
+<div class="container">
+<span id="liveclock" style="position:absolute;left:0;top:0;">
+</span>
+<script>
+/*
+Upper Left Corner Live Clock Script- (c) Dynamic Drive (www.dynamicdrive.com)
+For full source code, 100's more DHTML scripts, and TOS,
+visit http://www.dynamicdrive.com
+*/
+function show5(){
+ if (!document.layers&&!document.all&&!document.getElementById)
+ return
+ var Digital=new Date()
+ var hours=Digital.getHours()
+ var minutes=Digital.getMinutes()
+ var seconds=Digital.getSeconds()
+ var dn="AM" 
+ if (hours>12){
+ dn="PM"
+ hours=hours-12
+ }
+ if (hours==0)
+ hours=12
+ if (minutes<=9)
+ minutes="0"+minutes
+ if (seconds<=9)
+ seconds="0"+seconds
+//change font size here to your desire
+myclock="<font size='5' text color= 'white' face='Arial' ><b><font size='2'>Current Time:</font></br>"+hours+":"+minutes+":"
+ +seconds+" "+dn+"</b></font>"
+if (document.layers){
+document.layers.liveclock.document.write(myclock)
+document.layers.liveclock.document.close()
+}
+else if (document.all)
+liveclock.innerHTML=myclock
+else if (document.getElementById)
+document.getElementById("liveclock").innerHTML=myclock
+setTimeout("show5()",1000)
+ }
+</script>
+	<header>
+	<img src="final.png" alt="HTML5 Icon">
+	</header>
+	</div>
+	<div class="column-left">
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="whatcanwedo.html">What can we do?</a></li>
+  <li><a class="active" href="interestingfacts.html">Interesting Facts</a></li>
+  <li><a href="externalindex.html">About Me</a></li>
+  <li><a href="brokeboys.html">Stay Updated!</a></li>
+  <li><a href="fillin.html">TBA</a></li>
+</ul>
+  <script type="text/javascript">
+
+var todaydate=new Date()
+var curmonth=todaydate.getMonth()+1 //get current month (1-12)
+var curyear=todaydate.getFullYear() //get current year
+
+document.write(buildCal(curmonth ,curyear, "main", "month", "daysofweek", "days", 1));
+</script>
+</div>
+<div class="column-center">
+  <h1><u>The more you know!</u></h1>
+  <iframe src="IPCC.pdf" style="width:500px; height:400px;" frameborder="0"></iframe>
+	</div>
+	<!--PDF file downloaded from the IPCC website. -->
+
+<div class="column-right">
+	<h1> Learn more!</h1>
+    <p>Educate yourself about your surroundings and see if you can help at all! There are several things you can do to help our environment and it's better to start later than never. Our goal is to inform the general public about this problem and how it has its consequences.</p>
+    <h3> Here are some more organizations you should look into if you are further interested in this</h3>
+    <p>Enter the amount of organizations and charities you wish to view</p>
+	<script>
+function clicker() {
+    var fff = ["The Wildlife Conservation Network(Charity)","The Sierra Club(Charity)","The Conservation Fund(Charity)","The World Land Trust - US(Charity)","Ecotrust(Charity)","The National Audubon Society(Organization)","The Natural Resource Defense Council(Organization)","The National Wildlife Federation(Organization)","Earthjustice(Organization)","The United Nations Environment Programme(Organization)"];
+    var ppp = "";
+    var lent = document.getElementById("textJuan").value;
+    var rofl = lent;
+    while (rofl--) {
+        ppp += fff[rofl] + "<br>";
+    }
+    document.getElementById("kyaa").innerHTML = ppp;
+}
+
+function itaintwrong() {
+	var pop = document.forms["Form"]["textJuan"].value;
+	if (pop == "") {
+		alert("This must not be left blank");
+		return false;
+	}
+}
+</script>
+
+<body>
+<form name="Form" action="/action_page_post.php"
+onsubmit="return itaintwrong()" method="post">
+<input type="text" id="textJuan"/>
+<input type="button" value="click" onclick="clicker();itaintwrong()"/>
+</form>
+</body>
+
+<p id="kyaa"></p>
+
+</div>
+</body>
+</html>
