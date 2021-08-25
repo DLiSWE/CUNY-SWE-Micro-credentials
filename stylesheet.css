@@ -1,0 +1,81 @@
+div.container {
+    width: 100%;
+    border: 2px solid black; 
+}
+header {
+    width: 100%;
+    color: Black;
+    background-color: #01DBAF;
+    text-align: center;
+    padding-bottom: 1px;
+}
+body {
+	min-width: 630px;
+	background-image: url("Worldmap.png");
+	background-repeat: no-repeat;
+}
+	/* Picture found on http://snowfleikun.deviantart.com/art/Dots-world-map-179891314 by artist Snowfleikun */
+nav {
+	padding: 9px;
+	background-color: #5DF4C7;
+	text-align:center;
+	color: Black;
+	border: 2px solid black;
+}
+.container {
+	position: relative;
+	width: 500px;
+}
+.container div {
+	height: 300px;
+}
+
+.column-left {
+	width: 20%;
+	left: 0;
+	background: #7EED62;
+	position: absolute;
+	border: 2px solid black;
+}
+.column-center {
+	width: 40%;
+	background: #254AE1;
+	margin-left: 20%;
+	position: absolute;
+	text-align: center;
+	border: 2px solid black;
+	color: white
+}
+.column-right {
+	width: 40%;
+	right: 0;
+	position: absolute;
+	background: #862EDE;
+	text-align: center;
+	border: 2px solid black;
+	color: #F4E94A
+}
+table, th, td {
+	border: 1px solid black;
+	text-align: center;
+	margin-left: 10%
+}
+/* unvisited link */
+a:link {
+    color: blue;
+}
+
+/* visited link */
+a:visited {
+    color: orange;
+}
+
+/* mouse over link */
+a:hover {
+    color: yellow;
+}
+
+/* selected link */
+a:active {
+    color: red;
+}
