@@ -1,19 +1,38 @@
 html{
     background-image:url('1.jpg');
-    /* background-repeat: no-repeat; */
+
     background-size: cover;
 
 }
+.main {
+    max-width:1000px;
+    max-height:1000px;
+}
+
 
 .content{
     background:url('clock.png') no-repeat center;
+    background-color:rgba(255, 255, 255,0.3);
+    background-size:300px 300px;
     padding-bottom:1%;
     position: absolute;
-    width:100%;
-    height:100%;
+    width:298px;
+    height:284px;
+    border-radius:70%;
     overflow:hidden;
+    margin-left:10%;
+    margin-top:10%;
 }
 
+/* .content .bg{
+    border-radius:50%;
+    width:300px;
+    height:300px;
+    position:relative;
+    background-color:rgba(255, 255, 255,0.3);
+    top:30%;
+    left:30%;
+} */
 
 .minutes-container, .hours-container, .seconds-container {
     position: absolute;
@@ -25,8 +44,8 @@ html{
 
 .hours{
     background:url('hands.png') no-repeat center;
-    background-size: 290px 100px;
-    translate:150px 0;
+    background-size: 100px 40px;
+    translate:50px 0;
     height:100%;
     width:100%;
     position:absolute;
@@ -34,9 +53,9 @@ html{
 
 .minutes {
     background:url('hands.png') no-repeat center;
-    background-size: 400px 90px;
+    background-size: 120px 30px;
     transform: rotate(270deg);
-    translate:0 -200px;
+    translate:0 -60px;
     height:100%;
     width:100%;
     position:absolute;
@@ -44,9 +63,9 @@ html{
 
 .seconds {
     background:url('hands.png') no-repeat center;
-    background-size: 600px 70px;
+    background-size: 150px 30px;
     transform: rotate(270deg);
-    translate:0 -280px;
+    translate:0 -75px;
     height:100%;
     width:100%;
     position:absolute;
@@ -66,4 +85,21 @@ animation: tick 3600s infinite linear;
 }
 .seconds-container {
 animation: tick 60s infinite linear;
+}
+
+
+.message {
+    background-color: rgba(252, 252, 252, 0.89);
+    color: rgb(5, 5, 5);
+    height:10%;
+    width:30%;
+    min-height: 150px;
+    text-align: center;
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+}
+
+.message a, a:visited, a:focus, a:hover, a:active{
+    text-decoration: pink solid;
 }
