@@ -24,16 +24,6 @@ html{
     margin-top:10%;
 }
 
-/* .content .bg{
-    border-radius:50%;
-    width:300px;
-    height:300px;
-    position:relative;
-    background-color:rgba(255, 255, 255,0.3);
-    top:30%;
-    left:30%;
-} */
-
 .minutes-container, .hours-container, .seconds-container {
     position: absolute;
     top: 0;
