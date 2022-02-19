@@ -79,9 +79,10 @@
     height:100%;
     left:0;
     top:0;
-    background: rgba(75, 53, 196, 0.726);
+    background: rgba(255, 0, 0, 0.5);
     display: none
 }
+
 
 .mdlwindow h1{
     color:white;
