@@ -5,8 +5,8 @@
     display:flex;
     justify-content:space-around;
     border:1px black solid;
-    background:rgb(228, 243, 252);
-    margin-top: 10%;
+    background:rgb(223, 243, 255);
+    margin-top: 4%;
 }
 
 .bookmark {
@@ -83,6 +83,7 @@
     display: none
 }
 
+
 .mdlwindow:target{
     display:flex;
 }
@@ -107,7 +108,7 @@
 
 .close{
     position:absolute;
-    top: 10px;
+    top: 5px;
     right: 10px;
     background: rgb(253, 0, 0);
     color: white;
@@ -119,4 +120,6 @@
     text-align:center;
     display:flex;
     justify-content: center;
+    padding-top:7px;
+    border:1px solid black;
 }
