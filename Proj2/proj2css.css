@@ -269,7 +269,7 @@ body{
 .butn:hover{
     background-color: grey;
 }
-
+/* onhover display */
 .butn:hover + .bagadd{
     display:flex;
 }
@@ -282,8 +282,7 @@ body{
     align-self: center;
 }
 
-
-
+/* individual modal windows */
 .mdlwindow{
     position:fixed;
     width:100%;
@@ -433,7 +432,7 @@ footer{
     margin-top:10%;
 }
 
-
+/* media for small screens */
 @media only screen and (max-width: 650px){
     .book{
         display:flex;
