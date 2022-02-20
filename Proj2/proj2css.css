@@ -390,6 +390,7 @@ footer{
     background-color: black;
     color:white;
     list-style:none;
+    min-width:550px;
 }
 
 .navig {
@@ -440,6 +441,11 @@ footer{
         justify-content: center;
         width:100%;
         height:100%;
-        margin-left: 30%;
+        padding-left: 30%;
     }
+
+    .navig{
+        margin-left: -10%;
+    }
+    
 }
