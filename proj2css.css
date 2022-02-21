@@ -1,0 +1,456 @@
+body{
+    background-color:rgb(247, 247, 205);
+    font-size:12px;
+    margin-top:1%;
+    margin-left:3%;
+    margin-right:3%;
+    font-family:Arial;
+}
+
+
+/* Heading */
+.toppart{
+    width:100%;
+    max-height: 200px;
+    display:flex;
+}
+
+.toppart img{
+    border:1px rgb(91, 129, 29) solid;
+    border-radius: 10%;
+    box-shadow: -1px 3px 3px olive;
+    min-width:125px;
+    animation: topimg 2s linear;
+}
+
+.toppart .toptitle{
+    margin-left: 3%;
+    padding-top:15px;
+}
+
+.toppart .toptitle .bname{
+    font-family: Impact;
+    font-size:2.5rem;
+    color:rgb(91, 129, 29);
+    animation: topanimate 2s linear;
+    position:relative;
+}
+
+.toppart .toptitle .bdesc{
+    font-family: Helvetica;
+    font-size:1.3rem;
+    font-weight:bold;
+    font-style:italic;
+    position:absolute;
+    z-index:-3;
+    animation: botanimate 2s linear;
+}
+
+@keyframes topimg {
+    0% {margin-left:-10%}
+    33% {margin-left:-6%}
+    66% {margin-left:-3%}
+    99% {margin-left:0%}
+
+}
+
+@keyframes topanimate {
+    0% {margin-top:-30%}
+    33% {margin-top:-20%}
+    66% {margin-top:-10%}
+    99% {margin-top:0%}
+}
+
+@keyframes botanimate {
+    0% {margin-top:30%}
+    33% {margin-top:20%}
+    66% {margin-top:10%}
+    99% {margin-top:0%}
+}
+
+
+/* Slideshow for promotion */
+.stage{
+    width:100%;
+    height:50px;
+    border:1px solid black;
+    background-color:rgb(91, 129, 29);
+    overflow:hidden;
+    margin-top:1%;
+    text-align: center;
+}
+
+.slidewrapper{
+    width:300%;
+    height:100%;
+    border: 1px solid black;
+    animation:slideshow 25s infinite linear;
+    flex-wrap:nowrap;
+}
+
+.slide{
+    width:33%;
+    height:100%;
+    float:left;
+    color:white;
+    font-family: 'Courier New';
+    font-size:1.1rem;
+}
+
+/* slides */
+.s1{
+    background-size:100% 100%;
+    background-color:rgb(10, 131, 26);
+    display:flex;
+    justify-content: center;
+    padding-top:10px;
+
+}
+
+.s2{
+    background-size:100% 100%;
+    background-color: rgb(87, 136, 41);
+    display:flex;
+    justify-content: center;
+    padding-top:10px;
+}
+
+.s3{
+    background-size:100% 100%;
+    background-color:rgb(159, 161, 46);
+    display:flex;
+    justify-content: center;
+    padding-top:10px;
+}
+
+.content{
+    width:100%;
+    height:100%;
+}
+
+.content .vase{
+    position:relative;
+    width:100%;
+    height:700px;
+}
+
+.content .vase .textblock{
+    background-color: grey;
+    border:4px white solid;
+    width:40%;
+    min-width: 200px;
+    position: absolute;
+    margin-left:5%;
+    margin-top:15%;
+    text-align:center;
+    font-size:1.1rem;
+    padding:40px;
+    display:flex;
+}
+
+.content .content2{
+    width:100%;
+    height:100%;
+    margin-top:75px;
+    display:flex;
+    justify-content: space-around;
+    margin-bottom:50px;
+}
+
+.content .content2 .vase2 {
+    position: relative;
+    width:40%;
+    background: linear-gradient(rgba(255, 0, 157, 0.8), rgba(0, 153, 255, 0.8));
+}
+
+.content .content2 .vase2 img{
+    position:relative;
+    opacity:0.5;
+}
+
+.content .content2 .vase2 .vase2block{
+    background-color: transparent;
+    border:2px rgb(233, 235, 159) solid;
+    width:60%;
+    position: absolute;
+    margin-left:5%;
+    margin-top:15%;
+    text-align:center;
+    font-size:1rem;
+    padding:30px;
+    color:white;
+    min-width:150px;
+    z-index:1;
+}
+
+.content2 .content3 {
+    background-color: rgba(102, 138, 153, 0.2);
+    border: 2px rgba(102, 138, 153, 0.4) solid;
+    background: linear-gradient(rgba(204, 160, 187,0.4), rgba(72, 116, 146,0.4));
+    width:40%;
+    display:flex;
+    flex-wrap:wrap;
+    padding-left:50px;
+    padding-top:10px;
+    padding-bottom:50px;
+    font-size:1.2rem;
+    color:olivedrab;
+}
+
+.content3 .content3block{
+    display:flex;
+    flex-wrap: wrap;
+    height:40%;
+    margin-top:20%;
+}
+
+/* slideshow animation */
+@keyframes slideshow {
+    0% {margin-left: 0%}
+    33% {margin-left: -100%}
+    66% {margin-left: -200%}
+    99%{margin-left:0%}
+}
+
+/* Product and Modal window */
+.book{
+    width:100%;
+    height:600px;
+    display:flex;
+    justify-content:space-around;
+    border-top:1px solid black;
+}
+
+.bookmark {
+    width:18%;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    margin-top:20px;
+    margin-bottom:20px;
+    min-height:450px;
+    min-width:250px;
+    border-radius:10px;
+}
+
+.producttitle{
+    color:olive;
+    font-weight:bold;
+    font-style: italic;
+}
+
+.bookmark .butn {
+    border: 1px black solid;
+    background-color:rgb(0, 0, 0);
+    color:white;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:15px;
+    padding-right:15px;
+    display:flex;
+    justify-content: center;
+    align-self: center;
+    text-decoration: none;
+}
+
+.bagadd{
+    display:none;
+    border: 1px rgb(255, 255, 255) solid;
+    background-color:rgb(0, 0, 0);
+    color:white;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:15px;
+    padding-right:15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.butn:hover{
+    background-color: grey;
+}
+/* onhover display */
+.butn:hover + .bagadd{
+    display:flex;
+}
+
+.bookmark img{
+    align-self: center;
+}
+
+.bookmark h5,h6,p{
+    align-self: center;
+}
+
+/* individual modal windows */
+.mdlwindow{
+    position:fixed;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    font-size:1rem;
+}
+
+.mdlwindow:target{
+    display:block;
+}
+
+.mdlwindow .msgblock {
+    width:700px;
+    height:700px;
+    margin:100px auto;
+    position:relative;
+    background:rgb(255, 255, 255);
+}
+
+.mdlwindow .msgblock .content {
+    margin-left:2%;
+    display:flex;
+    flex-wrap: wrap;
+    
+}
+
+.mdlwindow .msgblock .content img {
+    margin-top:-10%;
+    margin-left:5%;
+}
+
+#confirm {
+    display:block;
+    margin-left:50px;
+    padding-top:25px;
+    padding-bottom:10px;
+    border-bottom:3px rgb(190, 190, 190) solid;
+    width:85%;
+
+}
+
+.mdlwindow .msgblock .content .modaldesc{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    margin-top:4%;
+    margin-left:5%;
+    max-width:40%;
+}
+
+.modalfoot{
+    margin-left:-2%;
+    margin-top:-5%;
+    background:rgb(172, 172, 172);
+    height:30%;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    padding-left:50px;
+    padding-top:10px;
+    padding-right:20px;
+    padding-bottom:20px;
+}
+
+.modalfoot p{
+    padding-top:10px;
+    padding-bottom:5px;
+    border-bottom:2px white solid;
+}
+
+/* close */
+.close{
+    position:absolute;
+    top:0;
+    right:0;
+    background: rgb(161, 161, 161);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    line-height: 0;
+    text-align:center;
+    display:flex;
+    justify-content: center;
+    padding:10px;
+    height:25px;
+    width:25px;
+    font-size:1.1rem;
+}
+
+.close:hover{
+    background-color:red;
+    color:white;
+}
+
+/* bottom navigation */
+footer{
+    width:100%;
+    padding-left:100px;
+    padding-right:100px;
+    font-size:1.2rem;
+    background-color: black;
+    color:white;
+    list-style:none;
+    min-width:550px;
+}
+
+.navig {
+    width:100%;
+    display:flex;
+    list-style: none;
+    justify-content:space-around;
+    padding-top:50px;
+    padding-bottom:70px;
+}
+
+.contact {
+    display:flex;
+    justify-content:right;
+}
+
+.contact ul{
+    list-style:none;
+    display:flex;
+}
+
+.contact ul li{
+    width:50px;
+    height:50px;
+}
+
+.navig ul{
+    list-style:none;
+}
+
+.navig a{
+    text-decoration: none;
+    color:white;
+}
+
+/* disclaimer */
+.disclaimer {
+    font-size: 0.9rem;
+    margin-left:40%;
+    margin-top:10%;
+}
+
+/* media for small screens */
+@media only screen and (max-width: 650px){
+    .content3block{
+        display:flex;
+        margin-left:-30%;
+    }
+
+
+    .book{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        width:100%;
+        height:100%;
+        padding-left: 30%;
+    }
+
+    .navig{
+        margin-left: -10%;
+    }
+    
+}
