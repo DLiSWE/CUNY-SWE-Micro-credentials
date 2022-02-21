@@ -481,7 +481,9 @@ footer{
     .book{
         margin-left:-10%;
     }
-
+    .toppart .toptitle .bdesc{
+        font-size:0.8rem;
+    }
     footer .navig{
         display:flex;
         justify-content:center;
