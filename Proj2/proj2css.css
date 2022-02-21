@@ -451,5 +451,9 @@ footer{
     .navig{
         margin-left: -10%;
     }
+
+    footer{
+        font-size:0.75rem;
+    }
     
 }
