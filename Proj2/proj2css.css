@@ -75,7 +75,7 @@ body{
     border:1px solid black;
     background-color:rgb(91, 129, 29);
     overflow:hidden;
-    margin-top:1%;
+    margin-top:2%;
     text-align: center;
 }
 
@@ -436,11 +436,9 @@ footer{
         display:flex;
         margin-left:-30%;
     }
-
-    .toppart .toptitle .bdesc{
-        font-size:1rem;
-    }
-
+    .stage{
+    margin-top:9%;
+}
     .book{
         display:flex;
         flex-direction: column;
@@ -481,9 +479,7 @@ footer{
     .book{
         margin-left:-10%;
     }
-    .toppart .toptitle .bdesc{
-        font-size:0.8rem;
-    }
+
     footer .navig{
         display:flex;
         justify-content:center;
