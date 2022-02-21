@@ -11,7 +11,6 @@ body{
 /* Heading */
 .toppart{
     width:100%;
-    max-height: 200px;
     display:flex;
 }
 
@@ -436,6 +435,10 @@ footer{
     .content3block{
         display:flex;
         margin-left:-30%;
+    }
+
+    .toppart .toptitle .bdesc{
+        font-size:1rem;
     }
 
     .book{
