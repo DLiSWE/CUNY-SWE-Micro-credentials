@@ -479,16 +479,9 @@ footer{
         margin-left:-10%;
     }
 
-
-    footer{
-        margin-left:-5%;
-    }
-
-
     footer .navig{
         display:flex;
         justify-content:center;
-        margin-left:-100px;
     }
 
     footer .contact{
