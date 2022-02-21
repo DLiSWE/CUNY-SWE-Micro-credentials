@@ -51,6 +51,7 @@ body{
     33% {margin-left:-6%}
     66% {margin-left:-3%}
     99% {margin-left:0%}
+
 }
 
 @keyframes topanimate {
@@ -191,7 +192,6 @@ body{
     flex-wrap:wrap;
     padding-left:50px;
     padding-top:10px;
-    padding-right:20px;
     padding-bottom:50px;
     font-size:1.2rem;
     color:olivedrab;
@@ -200,7 +200,7 @@ body{
 .content3 .content3block{
     display:flex;
     flex-wrap: wrap;
-    height:35%;
+    height:40%;
     margin-top:20%;
 }
 
