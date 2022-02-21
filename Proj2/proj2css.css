@@ -389,7 +389,6 @@ footer{
     background-color: black;
     color:white;
     list-style:none;
-    min-width:550px;
 }
 
 .navig {
@@ -449,11 +448,51 @@ footer{
     }
 
     .navig{
-        margin-left: -10%;
+        margin-left: -8%;
     }
 
     footer{
         font-size:0.75rem;
+        width:100%;
+        margin-left:0;
     }
-    
+    footer .navig{
+        display:flex;
+        justify-content:center;
+    }
+
+    footer .connect{
+        font-size:0.6rem;
+        margin-left:-20%;
+        padding-left:30%;
+    }
+    footer .contact{
+        display:flex;
+        justify-content:center;
+        margin-left:-10%;
+    }
+
+}
+
+@media only screen and (max-width: 428px){
+    .book{
+        margin-left:-10%;
+    }
+
+
+    footer{
+        margin-left:-5%;
+    }
+
+
+    footer .navig{
+        display:flex;
+        justify-content:center;
+        margin-left:-100px;
+    }
+
+    footer .contact{
+        display:flex;
+        justify-content: left;
+    }
 }
