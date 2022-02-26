@@ -39,7 +39,7 @@ class person {
     }
 }
 
-const John = new person('John', 64, 130);
+const John = new person('John', 64, 190);
 const Steve = new person('Steve', 70,180);
 
 let JohnBMI = John.calculate(John.height, John.weight);
@@ -56,10 +56,10 @@ const JohnHigherBMI = () => {
 let ishigher = JohnHigherBMI()
 
 if (JohnBMI > SteveBMI){
-    console.log(`John\'s BMI (${JohnBMI}) is greater than Steve\'s BMI (${SteveBMI}), John\'s BMI is higher than steve\'s: ${ishigher}`);
+    console.log(`John\'s BMI (${JohnBMI}) is greater than Steve\'s BMI (${SteveBMI}), John\'s BMI is higher than Steve\'s: ${ishigher}`);
 }
 else if (SteveBMI > JohnBMI) {
-    console.log(`Steve\'s BMI (${SteveBMI}) is greater than John\'s BMI (${JohnBMI}), John\'s BMI is higher than steve\'s: ${ishigher}`);
+    console.log(`Steve\'s BMI (${SteveBMI}) is greater than John\'s BMI (${JohnBMI}), John\'s BMI is higher than Steve\'s: ${ishigher}`);
 }
 else {
     console.log(`John\'s BMI (${JohnBMI}) is the same as Steve\'s BMI (${SteveBMI})`);
