@@ -42,17 +42,27 @@ class person {
 const John = new person('John', 64, 130);
 const Steve = new person('Steve', 70,180);
 
-JohnBMI = John.calculate(John.height, John.weight);
-SteveBMI = Steve.calculate(Steve.height, Steve.weight);
+let JohnBMI = John.calculate(John.height, John.weight);
+let SteveBMI = Steve.calculate(Steve.height, Steve.weight);
+
+const JohnHigherBMI = () => {
+    if (JohnBMI > SteveBMI){
+        return true
+    }
+    else{
+        return false
+    }
+}
+let ishigher = JohnHigherBMI()
 
 if (JohnBMI > SteveBMI){
-    console.log(`John's BMI (${JohnBMI}) is greater than Steve's BMI (${SteveBMI})`);
+    console.log(`John\'s BMI (${JohnBMI}) is greater than Steve\'s BMI (${SteveBMI}), John\'s BMI is higher than steve\'s: ${ishigher}`);
 }
 else if (SteveBMI > JohnBMI) {
-    console.log(`Steve's BMI (${SteveBMI}) is greater than John's BMI (${JohnBMI})`);
+    console.log(`Steve\'s BMI (${SteveBMI}) is greater than John\'s BMI (${JohnBMI}), John\'s BMI is higher than steve\'s: ${ishigher}`);
 }
 else {
-    console.log(`John's BMI (${JohnBMI}) is the same as Steve's BMI (${SteveBMI})`);
+    console.log(`John\'s BMI (${JohnBMI}) is the same as Steve\'s BMI (${SteveBMI})`);
 }
 
 // Use prompt() to let user type a number from the web page.
