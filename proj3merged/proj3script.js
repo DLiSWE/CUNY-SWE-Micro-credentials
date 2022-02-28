@@ -1,4 +1,4 @@
-let score = 1;
+let score = 10;
 const guesslist = [];
 
 // random number function
@@ -147,15 +147,3 @@ document.getElementById("reset1").addEventListener('click', reset)
 // reset button after win/loss on bottom
 document.getElementById("reset2").addEventListener('click', reset)
 document.getElementById("reset3").addEventListener('click', reset)
-
-
-
-        // picture.animate([
-        //     {transform: 'translate (0deg)'},
-        //     {transform: 'rotate(270deg'}
-        // ], {
-        //     duration: 2000,
-        //     easing: 'ease-in-out',
-        //     iterations: Infinity,
-        //     fill: 'forwards'
-        // });
