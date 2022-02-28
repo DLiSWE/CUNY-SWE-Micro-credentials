@@ -14,7 +14,6 @@ document.getElementById('current').innerText = score
 
 function changeStyling (status, uGuess){
     if (status === false){
-
         document.getElementById('current').innerText = score
         if (Number(document.getElementById('current').innerText) == 0){
             document.body.style.backgroundColor = 'red';
@@ -67,12 +66,13 @@ document.getElementById("submit1").addEventListener('click', function(){
     console.log(score)
     const uGuess = document.getElementById('guess').value;
     if (Number(uGuess) == randomchoice){
+        score++;
         changeStyling(true, uGuess)
         if (document.getElementById('high').innerText == 0) {
         document.getElementById('hi').innerText = document.getElementById('current').innerText
         }
         else if (document.getElementById('hi').innerText < score) {
-            document.getElementById('hi').innerText = `${score}`
+            document.getElementById('hi').innerText = `${score}`;
         }
         if (Number(document.getElementById('current').innerText) > Number(document.getElementById('high').innerText)){
             document.getElementById('high').innerText = `${score}`;
