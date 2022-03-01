@@ -6,35 +6,38 @@ html{
     background-image: linear-gradient(-90deg, purple,red);
 
 }
-
+/* modal overlay*/
 .modal{
     position:fixed;
     width:100%;
     height:100%;
     left:0;
     top:0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(20, 197, 29, 0.5);
     display: none;
     font-size:1rem;
 }
 
 .modal:target{
-    display:block;
+    display:flex;
 }
 
+/* modal window */
 .modal .window {
     width:300px;
     height:100px;
-    left:30%;
-    top:20%;
+    left:41%;
+    top:40%;
     position:relative;
     color: white;
     text-shadow: 3px 3px 4px rgba(29, 29, 29, 0.479);
     background: #8c4fd1;
     border-radius:10px;
     display:flex;
+    justify-content:center;
+    box-shadow: 2px 2px 4px black;
 }
-
+/* modal message */
 .modal .window .mdlmsg{
     display:flex;
     justify-content: center;
@@ -43,7 +46,6 @@ html{
     text-shadow:2px 2px 3px rgb(0, 0, 0);
 }
 
-/* close */
 .close{
     position:absolute;
     top:5px;
@@ -63,4 +65,32 @@ html{
     border-radius:50%;
     font-size:1.1rem;
     cursor: pointer;
+}
+
+.buttons {
+    display:flex;
+    flex-direction: row;
+    margin-top:40%;
+    width:100%;
+    justify-content: space-around;
+}
+
+.buttons button{
+    background-image: radial-gradient(rgb(26, 114, 38), rgb(21, 198, 230));
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left: 30px;
+    padding-right:30px;
+    color:purple;
+    font-size:1.1rem;
+    font-weight:bold;
+    animation: radialani 0.2s infinite linear;
+}
+@keyframes radialani {
+    0% {background-image: radial-gradient(rgb(230, 14, 14), rgb(98, 114, 26))}
+    20% {background-image: radial-gradient(rgb(221, 40, 8), rgb(211, 164, 9))}
+    40% {background-image: radial-gradient(rgb(209, 89, 9), rgb(204, 153, 13))}
+    60% {background-image: radial-gradient(rgb(204, 153, 13), rgb(209, 89, 9))}
+    80% {background-image: radial-gradient(rgb(211, 164, 9), rgb(221, 40, 8))}
+    99% {background-image: radial-gradient(rgb(98, 114, 26), rgb(230, 14, 14))}
 }

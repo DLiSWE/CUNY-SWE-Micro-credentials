@@ -11,8 +11,12 @@ let testc = 90
 function calculate(bill){
     return (bill < 30 || bill > 100 ? bill*1.2 : bill*1.15)
 }
-let result = calculate(testb)
-console.log(`Bill was ${testb},tip was ${parseFloat(result-testb).toFixed(2)} Total Value:${result}`)
+let resulta = calculate(testa)
+let resultb = calculate(testb)
+let resultc = calculate(testc)
+console.log(`Bill was ${testa},tip was ${parseFloat(resulta-testa).toFixed(2)} Total Value:${resulta}`)
+console.log(`Bill was ${testb},tip was ${parseFloat(resultb-testb).toFixed(2)} Total Value:${resulta}`)
+console.log(`Bill was ${testc},tip was ${parseFloat(resultc-testc).toFixed(2)} Total Value:${resulta}`)
 
 // switch (testa){
 //     case (30 < testa < 100): console.log(testa*0.15); break;
@@ -35,47 +39,51 @@ let c = [100,0,10]
 let f = [32,10,102]
 
 const convertCelsiusToFarenheight = (celsius) => {
-    let fahrenheit = celsius * 1.8 + 32;
-    if (celsius > -89.3 && celsius < 56.7){
-        return `${celsius}°C is ${fahrenheit}°F`;
+    let clength = celsius.length;
+    let i = 0;
+    while (i < clength){
+        let temp = celsius[i];
+        let fahrenheit = temp * 1.8 + 32;
+    if (temp > -89.3 && temp < 56.7){
+        console.log(`${celsius[i]}°C is ${fahrenheit}°F`);
 }
     else {
-        return `${celsius} cannot be converted.`
+        console.log(`${celsius[i]} cannot be converted.`);
     }
+    i++;}
+    return 'conversion complete'
 }
 const convertFahrenheitToCelsius = (fahrenheit) => {
-    let celsius = (fahrenheit-32) * (5/9);
-    if (fahrenheit > -128.74 && fahrenheit < 134.06){
-        return `${fahrenheit}°F is ${celsius}°C`;
+    let flength = fahrenheit.length;
+    let i = 0;
+    while (i < flength){
+        let temp = fahrenheit[i]
+        let celsius = (temp-32) * (5/9);
+    if (temp > -128.74 && temp < 134.06){
+        console.log(`${fahrenheit[i]}°F is ${celsius}°C`);
 }
     else {
-        return `${fahrenheit} cannot be converted`
+        console.log(`${fahrenheit[i]} cannot be converted`);
     }
+    i++}
+    return 'conversion complete'
 }
 
-console.log(convertCelsiusToFarenheight(c[0]));
-console.log(convertCelsiusToFarenheight(c[1]));
-console.log(convertCelsiusToFarenheight(c[2]));
-console.log(convertFahrenheitToCelsius(f[0]));
-console.log(convertFahrenheitToCelsius(f[1]));
-console.log(convertFahrenheitToCelsius(f[2]));
+console.log(convertCelsiusToFarenheight(c));
+console.log(convertFahrenheitToCelsius(f));
+
 
 // Create an HTML page that displays 3 buttons.
 // Clicking on any of the three buttons will open the same modal window.
 // Apply JavaScript only to open/close the modal window.
 $(document).ready(function(){
-    $("button").click(function(){
-        $(".modal").css("display","flex");
+    $("a").click(function(){
+        $(".modal").hide();
     });
 });
-
 
 $(document).ready(function(){
-    $("a").click(function(){
-        $(".modal").css("display","none");
+    $("button").click(function(){
+        $(".modal").show();
     });
 });
-
-function hide(){
-    $(".modal").css("display","none")
-}
