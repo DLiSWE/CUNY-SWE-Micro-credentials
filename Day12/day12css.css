@@ -1,0 +1,66 @@
+html{
+    font-size:12px;
+}
+
+html{
+    background-image: linear-gradient(-90deg, purple,red);
+
+}
+
+.modal{
+    position:fixed;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    font-size:1rem;
+}
+
+.modal:target{
+    display:block;
+}
+
+.modal .window {
+    width:300px;
+    height:100px;
+    left:30%;
+    top:20%;
+    position:relative;
+    color: white;
+    text-shadow: 3px 3px 4px rgba(29, 29, 29, 0.479);
+    background: #8c4fd1;
+    border-radius:10px;
+    display:flex;
+}
+
+.modal .window .mdlmsg{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    font-size:1rem;
+    text-shadow:2px 2px 3px rgb(0, 0, 0);
+}
+
+/* close */
+.close{
+    position:absolute;
+    top:5px;
+    right:5px;
+    background: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    line-height: 0;
+    text-align:center;
+    display:flex;
+    justify-content: center;
+    padding-top:5px;
+    padding-left:2.5px;
+    padding-right:2.5px;
+    height:10px;
+    width:10px;
+    border-radius:50%;
+    font-size:1.1rem;
+    cursor: pointer;
+}
