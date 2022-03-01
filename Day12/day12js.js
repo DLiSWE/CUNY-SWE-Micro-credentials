@@ -16,7 +16,7 @@ let resultb = calculate(testb)
 let resultc = calculate(testc)
 console.log(`Bill was ${testa},tip was ${parseFloat(resulta-testa).toFixed(2)} Total Value:${resulta}`)
 console.log(`Bill was ${testb},tip was ${parseFloat(resultb-testb).toFixed(2)} Total Value:${resultb}`)
-console.log(`Bill was ${testc},tip was ${parseFloat(resultc-testc).toFixed(2)} Total Value:${resultc}`)
+console.log(`Bill was ${testc},tip was ${parseFloat(resultc-testc).toFixed(2)} Total Value:${parseFloat(resultc).toFixed(2)}`)
 
 // Create 2 functions (Arrow Function Only) to convert temperature:
 // 1. Create a function called CovertCelsiusToFahrenheit. When calling the function, pass a Celsius
