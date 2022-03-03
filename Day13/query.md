@@ -1,20 +1,30 @@
-<img src='Day13\assignment7.JPG'
+<h2>Part1:</h2>
+<img src='assignment7.JPG' width='400'/>
 
-1. SELECT movie_name,release_date FROM movies
+<h2>Part2</h2>
+<ol>
+<li> SELECT movie_name,release_date FROM movies;</li>
+<p><b>53 records</b></p>
 
-2. SELECT first_name, last_name FROM directors WHERE nationality = 'American'
+<li> SELECT first_name, last_name FROM directors WHERE nationality = 'American';</li>
+<p><b>16 records</b></p>
 
-3.SELECT * FROM actors WHERE date_of_birth > '1970-01-01' and gender = 'M'
+<li>SELECT * FROM actors WHERE date_of_birth > '1970-01-01' and gender = 'M';</li>
+<p><b>31 records</b></p>
 
-4. SELECT movie_name FROM movies WHERE movie_length > 90 and movie_lang = 'English'
+<li> SELECT movie_name FROM movies WHERE movie_length > 90 and movie_lang = 'English';</li>
+<p><b>37 records</b></p>
+</ol>
 
+<h2>PART 3:</h2>
+<ol>
 
-PART 2:
-1.SELECT movie_name, movie_lang FROM movies WHERE movie_lang = 'English' or movie_lang = 'Korean' or movie_lang = 'Spanish'
-40 Records
+<li>SELECT movie_name, movie_lang FROM movies WHERE movie_lang = 'English' or movie_lang = 'Korean' or movie_lang = 'Spanish';</li>
+<p><b>40 Records</b></p>
 
-2.SELECT first_name, last_name FROM actors WHERE (last_name LIKE 'M%') and date_of_birth between '1940-01-01' and '1969-12-31'
-6 Records
+<li>2.SELECT first_name, last_name FROM actors WHERE (last_name LIKE 'M%') and date_of_birth between '1940-01-01' and '1969-12-31';</li>
+<p><b>6 Records</b></p>
 
-3. SELECT first_name, last_name FROM directors WHERE nationality in ('German','British','French') and date_of_birth Between '1950-01-01' and '1980-12-31'
-4 Records
+<li> SELECT first_name, last_name FROM directors WHERE nationality in ('German','British','French') and date_of_birth Between '1950-01-01' and '1980-12-31';</li>
+<p><b>4 Records</b></p>
+</ol>
