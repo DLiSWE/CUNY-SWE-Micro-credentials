@@ -67,7 +67,7 @@ ON movie_actors.movie_id = movie_revenues.movie_id
 WHERE movie_revenues.international_takings IS NOT NULL
 GROUP BY Actors
 ORDER BY SUM(movie_revenues.international_takings) DESC
-LIMIT 5
+LIMIT 3
 </li>
 </ol>
 </li>
@@ -108,3 +108,8 @@ WHERE movie_length > (SELECT AVG(movie_length) FROM movies
 </ol>
 </li>
 </ol>
+
+<h3>Project Idea</h3>
+<p>Partner: Luke Nam</p>
+<p>Stack: Django, javascript, HTML/CSS, PostGRES, jquery</p>
+<p>Create a pantry with CRUD. Allow user to update/add/delete their pantry. Find recipe found on spoonacular.</p>
